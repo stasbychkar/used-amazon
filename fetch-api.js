@@ -50,7 +50,7 @@ async function getData(data = {}) {
     });
     return response.json();
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
   }    
 }
   
