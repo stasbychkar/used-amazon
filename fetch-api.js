@@ -102,15 +102,38 @@ function jsonToHtml (responseJSON) {
     const card = document.createElement('div');
     card.className = 'product-card';
 
-    const cardContent = `
-        <h3>${product.title}</h3>
-        <p><strong>Price:</strong> ${product.price.value}</p>
-        <p>${product.rating}</p>
-        <a href="${product.url}" target="_blank">Amazon</a>
-      `;
+    // const cardContent = `
+    //     <img src="${product.mainImageUrl}" alt="Product Image">
+    //     <h3>${product.title}</h3>
+    //     <p><strong>Price:</strong> ${product.price.value}</p>
+    //     <p>${product.rating}</p>
+    //     <a href="${product.url}" target="_blank">Amazon</a>
+    //   `;
 
-      card.innerHTML = cardContent;
-      container.appendChild(card);
+    const cardContent = `
+            <div class="product-card">
+                <img src="${product.mainImageUrl}" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    ${product.title}
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">${product.price.value}</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="${product.url}" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+    `;
+
+    card.innerHTML = cardContent;
+    container.appendChild(card);
 
   }
 }

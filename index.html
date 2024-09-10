@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Used</title>
-    <!-- <script src="fetch-api.js" defer></script> -->
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Amazon Used</h1>
-    <form action="search.html" method="GET">
-        <input type="text" name="initialSearch" id="initialSearch" autocomplete="off">
-        <button type="submit" id="fake-search-btn">Search</button>    
-    </form>
-    <div class="response-container"></div>
+<body class="body-index">
+    <header class="index-header">
+        <div class="index-navbar">
+            <a href="index.html">
+                <img src="assets/imgs/full-logo.png" alt="Amazon Used" class="full-logo">
+            </a>
+            <a href="about.html">
+                <img src="assets/imgs/about.png" alt="About Site">
+            </a>
+        </div>
+    </header>
+    <main class="main-index">
+        <h1 class="h1-index">Search <span class="h1-purple">Amazon's</span> <span class="h1-green">BEST</span> Used Deals</h1>
+        <!-- <div class="index-form"> -->
+            <form action="search.html" method="GET" class="index-form">
+                <img src="assets/imgs/search-png.png" alt="Search" class="search-img">
+                <input type="text" name="initialSearch" id="initialSearch" autocomplete="off" placeholder="Enter Product Name">
+                <button type="submit" id="index-search-btn" class="arrow-search-btn"><img src="assets/imgs/btn-arrow.png" alt="Search Button"></button>    
+            </form>
+        <!-- </div> -->
+        <p>All generated links on this site are affiliate links. I may earn a commission if you make a purchase through them. <a href="#">Learn more</a> about how this supports the site.</p>
+    </main>
 </body>
 </html>

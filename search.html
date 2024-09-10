@@ -5,15 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <script src="fetch-api.js" defer></script>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Search listings</h1>
-    <form action="search.html" id="search-form">
-        <input type="text" name="inputSearch" id="inputSearch" autocomplete="off">
-        <button type="submit" id="search-btn">Search</button>    
-    </form>
-    <div class="listings-container">
+<body class="body-search">
+    <header class="search-header">
+        <div class="search-navbar">
+            <a href="index.html">
+            <img src="assets/imgs/logo.png" alt="Amazon Used">
+        </a>
+        <form action="search.html" id="search-form" class="search-form">
+            <input type="text" name="inputSearch" id="inputSearch" autocomplete="off">
+            <button type="submit" id="search-btn">
+                <img src="assets/imgs/search-png.png" alt="Search">
+            </button>    
+        </form>
+        <a href="index.html" class="about-link">About</a>
+        </div>
+    </header>
 
-    </div>
+    <main class="search-main">
+        <div class="listings-container">
+            <!-- Generates with JS -->
+            <!-- <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71EUarrL3YL._AC_UL320_.jpg" alt="Product Image" class="card-image">
+                <h2 class="card-title">
+                    WILSON NBA Authentic Series Outdoor Basketballs
+                </h2>
+                <div class="card-details">
+                    <div class="card-price">$26.95</div>
+                    <div class="card-rating">
+                        <img src="assets/imgs/rating.png" alt="">
+                        <div class="rating-number">4.5</div>
+                    </div>
+                </div>
+                <a href="https://www.amazon.com/Wilson-NBA-Authentic-Outdoor-Basketball/dp/B091MQ4P7D/ref=sr_1_8?dib=eyJ2IjoiMSJ9.ben0V3QrKb4SDRt_iMtCkf_RlSrP2ffJLy3RK4Na9UGh1g4PgRB8_NDyTxDuUMZ0fowG1Y_jvpiopQwXn25EdxWt-nrqmuKR1jYw0APmn4vygUuw0ALNwIToaSwZWMEgxaDt_Cau0YRBWuRXCTusg3weLQosB9rs30er43c18cxxx78qOND4qUos3uGbghMOpqQDCfM8h7TPg-VNuk7qcw.06YMQXyYa0nIYwr1U9Bj3NNI8kYl3BDCPT6pbWECX_g&dib_tag=se&keywords=basketball&qid=1725488717&refinements=p_n_condition-type%3A6503256011&s=sporting-goods&sr=1-8" target="_blank">
+                    <div class="card-amazon-btn">
+                        <span>Amazon</span>
+                        <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                    </div>
+                </a>
+            </div> -->
+        </div>
+    </main>
 </body>
 </html>
