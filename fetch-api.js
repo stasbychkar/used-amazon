@@ -101,6 +101,7 @@ function jsonToHtml (responseJSON) {
   for (product of productsArray) {
     const card = document.createElement('div');
     card.className = 'product-card';
+    const productTitle = product.title;
 
     // const cardContent = `
     //     <img src="${product.mainImageUrl}" alt="Product Image">
@@ -114,7 +115,7 @@ function jsonToHtml (responseJSON) {
             <div class="product-card">
                 <img src="${product.mainImageUrl}" alt="Product Image" class="card-image">
                 <h2 class="card-title">
-                    ${product.title}
+                    ${productTitle.slice(0, 45)}...
                 </h2>
                 <div class="card-details">
                     <div class="card-price">${product.price.value}</div>
