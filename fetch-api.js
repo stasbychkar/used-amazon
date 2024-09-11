@@ -115,10 +115,10 @@ function jsonToHtml (responseJSON) {
             <div class="product-card">
                 <img src="${product.mainImageUrl}" alt="Product Image" class="card-image">
                 <h2 class="card-title">
-                    ${productTitle.slice(0, 45)}...
+                    ${productTitle.slice(0, 80)}...
                 </h2>
                 <div class="card-details">
-                    <div class="card-price">${product.price.value}</div>
+                    <div class="card-price">$${product.price.value}</div>
                     <div class="card-rating">
                         <img src="assets/imgs/rating.png" alt="">
                         <div class="rating-number">4.5</div>
