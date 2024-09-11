@@ -104,7 +104,7 @@ function jsonToHtml (responseJSON) {
     let productTitle = product.title;
 
     if (productTitle.length > 60) {
-      productTitle = productTitle.slice(60) + "...";
+      productTitle = productTitle.slice(0, 60) + "...";
     }
 
     // const cardContent = `
