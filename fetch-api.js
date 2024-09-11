@@ -118,23 +118,23 @@ function jsonToHtml (responseJSON) {
     const cardContent = `
             <div class="product-card">
                 <img src="${product.mainImageUrl}" alt="Product Image" class="card-image">
-                <h2 class="card-title">
-                    ${productTitle}
-                </h2>
                 <div class="card-not-image">
-                  <div class="card-details">
-                      <div class="card-price">$${product.price.value.toFixed(2)}</div>
-                      <div class="card-rating">
-                          <img src="assets/imgs/rating.png" alt="">
-                          <div class="rating-number">${product.rating}</div>
-                      </div>
-                  </div>
-                  <a href="${product.url}" target="_blank">
-                      <div class="card-amazon-btn">
-                          <span>Amazon</span>
-                          <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
-                      </div>
-                  </a> 
+                    <h2 class="card-title">
+                        ${productTitle}
+                    </h2>
+                    <div class="card-details">
+                        <div class="card-price">$${product.price.value.toFixed(2)}</div>
+                        <div class="card-rating">
+                            <img src="assets/imgs/rating.png" alt="">
+                            <div class="rating-number">${product.rating}</div>
+                        </div>
+                    </div>
+                    <a href="${product.url}" target="_blank">
+                        <div class="card-amazon-btn">
+                            <span>Amazon</span>
+                            <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
+                        </div>
+                    </a> 
                 </div>
             </div>
     `;
