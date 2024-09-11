@@ -101,7 +101,7 @@ function jsonToHtml (responseJSON) {
   for (product of productsArray) {
     const card = document.createElement('div');
     card.className = 'product-card';
-    const productTitle = product.title;
+    let productTitle = product.title;
 
     if (productTitle.length > 60) {
       productTitle = productTitle.slice(60) + "...";
@@ -122,7 +122,7 @@ function jsonToHtml (responseJSON) {
                     ${productTitle}
                 </h2>
                 <div class="card-details">
-                    <div class="card-price">$${product.price.value}</div>
+                    <div class="card-price">$${product.price.value.toFixed(2)}</div>
                     <div class="card-rating">
                         <img src="assets/imgs/rating.png" alt="">
                         <div class="rating-number">4.5</div>
