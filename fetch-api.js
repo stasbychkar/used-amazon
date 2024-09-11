@@ -122,7 +122,7 @@ function jsonToHtml (responseJSON) {
                     ${productTitle}
                 </h2>
                 <div class="card-details">
-                    <div class="card-price">$${product.price.value}</div>
+                    <div class="card-price">$${product.price.value.toFixed(2)}</div>
                     <div class="card-rating">
                         <img src="assets/imgs/rating.png" alt="">
                         <div class="rating-number">4.5</div>

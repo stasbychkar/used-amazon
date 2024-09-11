@@ -338,11 +338,11 @@ textarea:not([rows]) {
 }
 
 .product-card {
-  height: 380px;
+  height: 400px;
   width: 215px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .card-image {
@@ -356,6 +356,7 @@ textarea:not([rows]) {
   color: var(--main-blue);
   font-size: 16px;
   text-align: center;
+  /* min-height: 60px; */
 }
 
 .card-price {
@@ -383,6 +384,8 @@ textarea:not([rows]) {
   display: flex;
   justify-content: space-between; 
   align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .card-amazon-btn  {
