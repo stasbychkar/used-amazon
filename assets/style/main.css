@@ -505,36 +505,7 @@ textarea:not([rows]) {
 
 }
 
-/* spinner */
-
-/* #loading-spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-.spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
-
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
+/* loader */
 .loader {
   width: 90px;
   height: 14px;
@@ -561,6 +532,50 @@ textarea:not([rows]) {
 @keyframes l4 {
     100% {background-position: calc(100%/3) 0}
 }
+
+/* animation classes */
+.appear-first {
+  animation: fade-in 0.3s;
+}
+
+.appear-second {
+  animation: fade-in 0.8s;
+}
+
+.appear-third {
+  animation: appear 2s;
+  animation-timing-function: cubic-bezier(0.83, 0.12, 0.94, 0.94);
+}
+
+.product-card {
+  animation: appear 0.5s;
+}
+
+/* animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    /* transform: translateY(20px); */
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 
 
