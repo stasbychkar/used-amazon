@@ -277,6 +277,10 @@ textarea:not([rows]) {
   .index-form {
     padding-left: 7px;
   }
+
+  .index-form .search-img {
+    display: none;
+  }
 }
 
 @media (max-width: 380px) {
