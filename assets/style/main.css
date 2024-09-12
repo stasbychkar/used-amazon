@@ -269,6 +269,14 @@ textarea:not([rows]) {
     width: 70%;
     height: auto;
   }
+
+  .index-form input {
+    margin-left: 3px;
+  }
+
+  .index-form {
+    padding-left: 7px;
+  }
 }
 
 @media (max-width: 380px) {
