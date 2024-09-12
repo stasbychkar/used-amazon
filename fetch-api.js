@@ -96,7 +96,7 @@ function jsonToHtml (responseJSON) {
   }
   
   const container = document.querySelector('.listings-container');
-  const productsArray = responseJSON.amazonProductSearchResults.productResults.results;
+  var productsArray = responseJSON.amazonProductSearchResults.productResults.results;
   
   for (product of productsArray) {
     const card = document.createElement('div');
