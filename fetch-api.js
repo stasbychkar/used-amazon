@@ -22,9 +22,6 @@ async function fetchConfig(key) {
   }
 }
 
-// await fetchConfig("API_KEY") // how to use fetchConfig(key)
-// await fetchConfig("API_URL")
-
 window.onload = function() {
   const urlParams = new URLSearchParams(window.location.search);
   const query = urlParams.get('initialSearch'); // getting query by name
@@ -96,7 +93,7 @@ function jsonToHtml (responseJSON) {
   }
   
   const container = document.querySelector('.listings-container');
-  var productsArray = responseJSON.amazonProductSearchResults.productResults.results;
+  const productsArray = responseJSON.amazonProductSearchResults.productResults.results;
   
   for (product of productsArray) {
     const card = document.createElement('div');
@@ -107,14 +104,6 @@ function jsonToHtml (responseJSON) {
       productTitle = productTitle.slice(0, 60) + "...";
     }
 
-    // const cardContent = `
-    //     <img src="${product.mainImageUrl}" alt="Product Image">
-    //     <h3>${product.title}</h3>
-    //     <p><strong>Price:</strong> ${product.price.value}</p>
-    //     <p>${product.rating}</p>
-    //     <a href="${product.url}" target="_blank">Amazon</a>
-    //   `;
-
     const cardContent = `
             <div class="product-card">
                 <img src="${product.mainImageUrl}" alt="Product Image" class="card-image">
@@ -123,7 +112,9 @@ function jsonToHtml (responseJSON) {
                         ${productTitle}
                     </h2>
                     <div class="card-details">
-                        <div class="card-price">$${product.price.value}</div>
+                        <div class="card-price">
+                            $${product.price.value.toFixed(2)}
+                        </div>
                         <div class="card-rating">
                             <img src="assets/imgs/rating.png" alt="">
                             <div class="rating-number">${product.rating}</div>
@@ -141,7 +132,6 @@ function jsonToHtml (responseJSON) {
 
     card.innerHTML = cardContent;
     container.appendChild(card);
-
   }
 }
 

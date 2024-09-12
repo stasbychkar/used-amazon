@@ -122,6 +122,14 @@ textarea:not([rows]) {
   align-items: center;
 }
 
+.full-logo {
+  width: 224px;
+}
+
+.about-img {
+  width: 54px;
+}
+
 
 .h1-index {
   font-size: 85px;
@@ -169,7 +177,7 @@ textarea:not([rows]) {
 
 .index-form img {
   width: 30px;
-  height: 30px;
+  /* height: 30px; */
 }
 
 .arrow-search-btn {
@@ -243,6 +251,14 @@ textarea:not([rows]) {
   .main-index p {
     font-size: 14px;
   }
+
+  .h1-index {
+    margin-top: 20px;
+  }
+
+  .main-index {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -279,6 +295,8 @@ textarea:not([rows]) {
 
 .search-navbar img {
   max-width: unset;
+  width: 39.4px;
+  height: auto;
 }
 
 .search-form {
@@ -400,6 +418,11 @@ textarea:not([rows]) {
   font-size: 21px;
   justify-content: center;
   gap: 10px;
+}
+
+.card-amazon-btn img {
+  width: 22px;
+  height: 22px;
 }
 
 .product-card a {
