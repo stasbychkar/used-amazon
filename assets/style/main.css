@@ -191,6 +191,11 @@ textarea:not([rows]) {
   align-items: center;
 }
 
+.arrow-search-btn img {
+  width: auto;
+  height: 60%;
+}
+
 .index-form input {
   flex-grow: 1;
   border: none;
