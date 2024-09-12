@@ -76,13 +76,13 @@ async function getData(data = {}) {
   
 const requestData = async (query) => {
   // displaying CSS loader
-  document.querySelector("#search-loader").style.display = "block";
+  document.querySelector("#search-loader").style.display = "grid";
 
   const { data, error, errors } = await getData({
     query
   });
 
-  // displaying CSS loader
+  // hiding CSS loader
   document.querySelector("#search-loader").style.display = "none";
     
     jsonToHtml(data); // inserts values from response to HTML
