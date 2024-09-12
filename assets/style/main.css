@@ -274,6 +274,11 @@ textarea:not([rows]) {
   .index-form .search-img {
     display: none;
   }
+
+  .arrow-search-btn img {
+    width: 70%;
+    height: auto;
+  }
 }
 
 /* Search Page */
@@ -286,7 +291,6 @@ textarea:not([rows]) {
   align-items: center;
   background-color: var(--main-grey);
   padding: 0 15px;
-  /* ? */
   position: fixed;
 }
 
@@ -294,7 +298,6 @@ textarea:not([rows]) {
   display: flex; 
   flex-direction: row;
   gap: 20px;
-  /* justify-content: center; */
   align-items: center;
 }
 
