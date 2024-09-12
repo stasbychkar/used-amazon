@@ -127,7 +127,7 @@ function jsonToHtml (responseJSON) {
                             <div class="rating-number">${product.rating}</div>
                         </div>
                     </div>
-                    <a href="${product.url}" target="_blank">
+                    <a href="https://www.amazon.com/dp/${product.asin}?tag=usedamazon-20" target="_blank">
                         <div class="card-amazon-btn">
                             <span>Amazon</span>
                             <img src="assets/imgs/amazon-link.png" alt="Amazon Link">
