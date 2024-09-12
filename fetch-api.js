@@ -47,9 +47,9 @@ function getQuery(searchVar) {
                 value
               }
               title
-              url
               mainImageUrl
               rating
+              asin
             }
           }
         }
