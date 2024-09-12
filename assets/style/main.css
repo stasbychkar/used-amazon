@@ -264,6 +264,11 @@ textarea:not([rows]) {
   .main-index {
     gap: 30px;
   }
+
+  .arrow-search-btn img {
+    width: 70%;
+    height: auto;
+  }
 }
 
 @media (max-width: 380px) {
