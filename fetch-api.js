@@ -75,9 +75,16 @@ async function getData(data = {}) {
 }
   
 const requestData = async (query) => {
-    const { data, error, errors } = await getData({
-        query
-      });
+  // displaying CSS loader
+  document.querySelector("#search-loader").style.display = "block";
+
+  const { data, error, errors } = await getData({
+    query
+  });
+
+  // displaying CSS loader
+  document.querySelector("#search-loader").style.display = "none";
+    
     jsonToHtml(data); // inserts values from response to HTML
     if (errors) {
       errors.forEach((e) => console.log(e.message));
